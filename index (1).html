@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Image Resizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Smart <span>Resizer</span></h1>
+        <p>Upload image, set dimensions, and download instantly.</p>
+    </header>
+
+    <main class="resizer-box">
+        <div class="upload-section" id="drop-zone">
+            <input type="file" id="file-input" accept="image/*" hidden>
+            <div class="upload-icon">📸</div>
+            <p>Click or Drag Photo Here</p>
+        </div>
+
+        <div class="controls" id="controls" style="display:none;">
+            <div class="input-group">
+                <label>Width (px)</label>
+                <input type="number" id="width-input">
+            </div>
+            <div class="input-group">
+                <label>Height (px)</label>
+                <input type="number" id="height-input">
+            </div>
+            <button id="download-btn" class="premium-btn">Resize & Download</button>
+        </div>
+        
+        <canvas id="canvas" style="display:none;"></canvas>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
